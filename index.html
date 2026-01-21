@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>LCV Téléphonie & Informatique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="LCV Téléphonie & Informatique" class="logo">
+    <h1>LCV Téléphonie & Informatique</h1>
+    <p class="slogan">Dépannage rapide • Informatique • Téléphonie</p>
+    <a href="#rdv" class="btn-primary">Prendre rendez-vous</a>
+</header>
+
+<section class="services">
+    <h2>Nos services</h2>
+    <div class="services-grid">
+        <div class="service">💻 Dépannage informatique</div>
+        <div class="service">📱 Réparation téléphones</div>
+        <div class="service">🛠️ Installation & configuration</div>
+        <div class="service">🌐 Problèmes internet & Wi-Fi</div>
+    </div>
+</section>
+
+<section class="why">
+    <h2>Pourquoi choisir LCV ?</h2>
+    <div class="why-grid">
+        <div>⚡ Intervention rapide</div>
+        <div>🧑‍💻 Professionnel qualifié</div>
+        <div>💰 Tarifs clairs et honnêtes</div>
+        <div>📍 Service de proximité</div>
+    </div>
+</section>
+
+<section class="rdv" id="rdv">
+    <h2>Prendre rendez-vous</h2>
+
+    <form action="https://formsubmit.co/TON_EMAIL@gmail.com" method="POST">
+        <input type="text" name="nom" placeholder="Nom & Prénom" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="telephone" placeholder="Téléphone" required>
+
+        <select name="service" required>
+            <option value="">Choisir un service</option>
+            <option>Dépannage informatique</option>
+            <option>Réparation téléphone</option>
+            <option>Installation / Configuration</option>
+            <option>Internet / Wi-Fi</option>
+        </select>
+
+        <input type="date" name="date" required>
+        <textarea name="message" placeholder="Expliquez votre problème"></textarea>
+
+        <button type="submit">Envoyer la demande</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 LCV Téléphonie & Informatique</p>
+</footer>
+
+</body>
+</html>
