@@ -5,6 +5,25 @@
     <title>Batteries - LCV Téléphonie & Informatique</title>
     <link rel="stylesheet" href="style.css">
 </head>
+    <script>
+function filterProducts(category) {
+    const products = document.querySelectorAll('.service');
+    const buttons = document.querySelectorAll('.filter-btn');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    event.target.classList.add('active');
+
+    products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+</script>
+
 <body>
 
 <header>
@@ -12,6 +31,11 @@
     <h1>Batteries</h1>
     <p>Remplacement & vente de batteries</p>
 </header>
+<div class="filters">
+    <button class="filter-btn active" onclick="filterProducts('all')">Tous</button>
+    <button class="filter-btn" onclick="filterProducts('iphone')">iPhone</button>
+    <button class="filter-btn" onclick="filterProducts('android')">Android</button>
+</div>
 
 <section class="services">
 
