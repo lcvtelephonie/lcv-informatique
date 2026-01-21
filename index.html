@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>LCV Téléphonie & Informatique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>LCV Téléphonie & Informatique</h1>
+    <p>Dépannage informatique & téléphonie</p>
+</header>
+
+<section class="rdv">
+    <h2>Prendre rendez-vous</h2>
+
+    <form action="https://formsubmit.co/TON_EMAIL@gmail.com" method="POST">
+        <input type="text" name="nom" placeholder="Nom & Prénom" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="telephone" placeholder="Téléphone" required>
+
+        <select name="service" required>
+            <option value="">Choisir un service</option>
+            <option>Dépannage informatique</option>
+            <option>Réparation téléphone</option>
+            <option>Installation / Configuration</option>
+            <option>Autre</option>
+        </select>
+
+        <input type="date" name="date" required>
+        <textarea name="message" placeholder="Décrivez votre problème"></textarea>
+
+        <button type="submit">Envoyer la demande</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 LCV Téléphonie & Informatique</p>
+</footer>
+
+</body>
+</html>
