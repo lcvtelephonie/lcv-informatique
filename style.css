@@ -214,4 +214,34 @@ h2 {
         padding: 15px;
     }
 }
+/* ===== FILTRES PRODUITS ===== */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px;
+}
+
+.filter-btn {
+    background: #e6ecff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #0a3cff;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background: #0a3cff;
+    color: white;
+}
+
+.filter-btn.active {
+    background: #0a3cff;
+    color: white;
+}
+
 
