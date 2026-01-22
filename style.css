@@ -450,6 +450,14 @@ header h1 {
 h1 {
     color: #0a3cff; /* bleu */
 }
+/* ===== COULEUR SLOGAN ===== */
+
+.slogan {
+    color: #0a3cff; /* bleu */
+    font-size: 18px;
+    font-weight: 500;
+}
+
 
 
 
