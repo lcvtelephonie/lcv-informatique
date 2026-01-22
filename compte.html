@@ -5,7 +5,7 @@
     <title>Espace client – LCV Téléphonie & Informatique</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Lien vers ton CSS -->
+    <!-- CSS principal -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,26 +19,58 @@
     <p class="slogan">Accédez à vos demandes et commandes</p>
 </header>
 
-<section class="rdv">
+<!-- BOUTONS NAVIGATION -->
+<div style="text-align:center; margin-bottom:30px;">
+    <a href="#connexion" class="btn-accueil">Connexion</a>
+    <a href="#inscription" class="btn-accueil">Créer un compte</a>
+</div>
+
+<!-- CONNEXION -->
+<section class="rdv" id="connexion">
     <h2>Connexion client</h2>
 
     <p style="text-align:center;">
-        Entrez votre email. Un conseiller vous recontactera rapidement.
+        Entrez votre email pour accéder à votre espace client.
+        Un conseiller vous recontactera rapidement.
     </p>
 
-    <!-- Formulaire simple -->
     <form action="https://formsubmit.co/lcvtelephonie@gmail.com" method="POST">
-
-        <!-- Sécurité FormSubmit -->
         <input type="hidden" name="_captcha" value="false">
 
         <label>Email</label>
         <input type="email" name="Email" placeholder="exemple@email.com" required>
 
         <label>Message</label>
-        <textarea name="Message" placeholder="Ex : accès espace client, suivi commande…"></textarea>
+        <textarea name="Message" placeholder="Ex : suivi commande, accès espace client"></textarea>
 
         <button type="submit">Accéder à mon espace client</button>
+    </form>
+</section>
+
+<!-- INSCRIPTION -->
+<section class="rdv" id="inscription">
+    <h2>Créer un compte</h2>
+
+    <p style="text-align:center;">
+        Créez votre espace client. Un conseiller validera votre compte sous 24h.
+    </p>
+
+    <form action="https://formsubmit.co/lcvtelephonie@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+
+        <label>Nom</label>
+        <input type="text" name="Nom" required>
+
+        <label>Email</label>
+        <input type="email" name="Email" required>
+
+        <label>Téléphone</label>
+        <input type="tel" name="Téléphone">
+
+        <label>Message</label>
+        <textarea name="Message" placeholder="Ex : création de compte client"></textarea>
+
+        <button type="submit">Créer mon compte</button>
     </form>
 </section>
 
