@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Espace client – LCV Téléphonie & Informatique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Lien vers ton CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Bouton retour accueil -->
+<a href="index.html" class="btn-accueil">Accueil</a>
+
+<header>
+    <h1>Espace client</h1>
+    <p class="slogan">Accédez à vos demandes et commandes</p>
+</header>
+
+<section class="rdv">
+    <h2>Connexion client</h2>
+
+    <p style="text-align:center;">
+        Entrez votre email. Un conseiller vous recontactera rapidement.
+    </p>
+
+    <!-- Formulaire simple -->
+    <form action="https://formsubmit.co/lcvtelephonie@gmail.com" method="POST">
+
+        <!-- Sécurité FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <label>Email</label>
+        <input type="email" name="Email" placeholder="exemple@email.com" required>
+
+        <label>Message</label>
+        <textarea name="Message" placeholder="Ex : accès espace client, suivi commande…"></textarea>
+
+        <button type="submit">Accéder à mon espace client</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 – LCV Téléphonie & Informatique</p>
+</footer>
+
+</body>
+</html>
