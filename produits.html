@@ -2,76 +2,98 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Commande - LCV Téléphonie & Informatique</title>
+    <title>Batteries - LCV Téléphonie & Informatique</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+function filterProducts(category, button) {
+    const products = document.querySelectorAll('.service');
+    const buttons = document.querySelectorAll('.filter-btn');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+<body>
+
+    products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+</script>
+<!-- BOUTON RETOUR -->
+<a href="index.html" class="btn-retour">← Retour à l’accueil</a>
 
 <body>
 
-<!-- RETOUR -->
-<a href="produits.html" class="btn-retour">← Retour aux produits</a>
-
+<!-- HEADER -->
 <header>
-    <h1>Passer une commande</h1>
-    <p>Choisissez votre produit et laissez vos coordonnées</p>
+    <img src="logo.png" class="logo" alt="LCV">
+    <h1>Batteries</h1>
+    <p>Remplacement & vente de batteries</p>
 </header>
 
-<section class="rdv">
+<!-- FILTRES -->
+<div class="filters">
+    <button class="filter-btn active" onclick="filterProducts('all', this)">Tous</button>
+    <button class="filter-btn" onclick="filterProducts('iphone', this)">iPhone</button>
+    <button class="filter-btn" onclick="filterProducts('android', this)">Android</button>
+</div>
 
-    <form action="#" method="post">
 
-        <label>Nom & Prénom</label>
-        <input type="text" placeholder="Votre nom" required>
+<!-- PRODUITS -->
+<section class="services">
 
-        <label>Email</label>
-        <input type="email" placeholder="exemple@mail.com" required>
+   <section class="services">
+    <!-- CATÉGORIE IPHONE -->
+    <h2 class="categorie-title">Batteries iPhone</h2>
 
-        <label>Téléphone</label>
-        <input type="tel" placeholder="06 00 00 00 00" required>
+    <div class="service" data-category="iphone">
+    <div class="service reveal" data-category="iphone">
+        <img src="batterie.jpg" alt="Batterie iPhone">
+        <h3>Batterie iPhone</h3>
+        <p>Remplacement batterie iPhone</p>
+        <strong>59 €</strong><br><br>
+        <a href="produit-batterie.html" class="btn-primary">Voir le produit</a>
+        <a href="commande.html" class="btn-commande">Commander</a>
+    </div>
 
-        <label>Catégorie</label>
-        <select required>
-            <option value="">-- Choisir une catégorie --</option>
-            <option>Batterie</option>
-            <option>Écran</option>
-            <option>Accessoire</option>
-        </select>
+    <div class="service reveal" data-category="iphone">
+        <img src="batterie.jpg" alt="Batterie iPhone">
+        <h3>Batterie iPhone XR / XS</h3>
+        <p>Batterie haute capacité</p>
+        <strong>55 €</strong><br><br>
+        <a href="commande.html" class="btn-commande">Commander</a>
+    </div>
 
-        <label>Produit souhaité</label>
-        <select required>
-            <option value="">-- Choisir un produit --</option>
+    <div class="service" data-category="android">
+    <!-- CATÉGORIE ANDROID -->
+    <h2 class="categorie-title">Batteries Android</h2>
 
-            <!-- BATTERIES -->
-            <option>Batterie iPhone</option>
-            <option>Batterie iPhone XR / XS</option>
-            <option>Batterie Samsung</option>
-            <option>Batterie Xiaomi</option>
+    <div class="service reveal" data-category="android">
+        <img src="batterie.jpg" alt="Batterie Android">
+        <h3>Batterie Android</h3>
+        <h3>Batterie Samsung</h3>
+        <p>Samsung, Xiaomi, Huawei…</p>
+        <strong>45 €</strong><br><br>
+        <a href="produit-batterie.html" class="btn-primary">Voir le produit</a>
+        <a href="commande.html" class="btn-commande">Commander</a>
+    </div>
 
-            <!-- ÉCRANS -->
-            <option>Écran iPhone</option>
-            <option>Écran Samsung</option>
-            <option>Écran Xiaomi</option>
-
-            <!-- ACCESSOIRES -->
-            <option>Chargeur</option>
-            <option>Câble USB</option>
-            <option>Coque de protection</option>
-        </select>
-
-        <label>Message (modèle exact, couleur, infos…)</label>
-        <textarea placeholder="Ex : iPhone 11, écran noir, batterie originale"></textarea>
-
-        <button type="submit">Envoyer la commande</button>
-
-    </form>
-
-    <p class="rdv-info">
-        ⚠️ La commande sera confirmée après vérification de la disponibilité.
-    </p>
+    <div class="service reveal" data-category="android">
+        <img src="batterie.jpg" alt="Batterie Android">
+        <h3>Batterie Xiaomi</h3>
+        <p>Batterie compatible origine</p>
+        <strong>49 €</strong><br><br>
+        <a href="commande.html" class="btn-commande">Commander</a>
+    </div>
 
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2026 LCV Téléphonie & Informatique</p>
     <p>
@@ -79,6 +101,30 @@
         <a href="mentions-legales.html">Mentions légales</a>
     </p>
 </footer>
+    <script>
+function commanderProduit(nomProduit) {
+    document.getElementById("produitChoisi").value = nomProduit;
+    document.getElementById("commande").scrollIntoView({ behavior: "smooth" });
+
+<!-- SCRIPT FILTRES -->
+<script>
+function filterProducts(category, button) {
+    const products = document.querySelectorAll('.service');
+    const buttons = document.querySelectorAll('.filter-btn');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+</script>
+
 
 </body>
-</html>
+
