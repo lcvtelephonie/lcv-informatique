@@ -584,6 +584,15 @@ a.btn-accueil:hover {
     transform: translateY(-2px) !important;
     box-shadow: 0 8px 22px rgba(10,60,255,0.55) !important;
 }
+.nav-left {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-right {
+    margin-left: auto;
+}
+
 
 
 
