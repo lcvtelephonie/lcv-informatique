@@ -592,6 +592,63 @@ a.btn-accueil:hover {
 .nav-right {
     margin-left: auto;
 }
+/* ===== ANIMATION APPARITION ===== */
+
+section, header {
+    animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+.service,
+.produit {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover,
+.produit:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+button,
+.btn-commande,
+.btn-accueil {
+    transition: all 0.25s ease;
+}
+
+button:hover,
+.btn-commande:hover,
+.btn-accueil:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+.nav-links li a {
+    position: relative;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+
 
 
 
