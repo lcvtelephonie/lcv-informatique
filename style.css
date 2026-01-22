@@ -271,5 +271,33 @@ h2 {
     color: #666;
 }
 
+/* ===== FORMULAIRE RDV ===== */
+
+.rdv-form {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rdv-form input,
+.rdv-form select,
+.rdv-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.rdv-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.rdv-form button {
+    margin-top: 10px;
+}
+
 
 
