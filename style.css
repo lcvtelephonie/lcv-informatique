@@ -445,6 +445,12 @@ p, li, label {
 header h1 {
     color: #0a3cff; /* bleu */
 }
+/* ===== COULEUR DU H1 (NOM DU SITE) ===== */
+
+h1 {
+    color: #0a3cff; /* bleu */
+}
+
 
 
 
