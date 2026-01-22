@@ -2,52 +2,82 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Commande / Devis – LCV Téléphonie & Informatique</title>
+    <title>Commande - LCV Téléphonie & Informatique</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<a href="index.html" class="btn-accueil">Accueil</a>
+<!-- RETOUR -->
+<a href="produits.html" class="btn-retour">← Retour aux produits</a>
 
 <header>
-    <h1>Commande / Devis</h1>
-    <p class="slogan">Demande sans paiement – réponse rapide</p>
+    <h1>Passer une commande</h1>
+    <p>Choisissez votre produit et laissez vos coordonnées</p>
 </header>
 
 <section class="rdv">
-    <h2>Formulaire de commande</h2>
 
-    <p style="text-align:center;">
-        Remplissez ce formulaire. Nous vous confirmons le prix et la disponibilité.
-    </p>
+    <form action="#" method="post">
 
-    <form action="https://formsubmit.co/lcvtelephonie@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-
-        <label>Nom</label>
-        <input type="text" name="Nom" required>
+        <label>Nom & Prénom</label>
+        <input type="text" placeholder="Votre nom" required>
 
         <label>Email</label>
-        <input type="email" name="Email" required>
+        <input type="email" placeholder="exemple@mail.com" required>
 
         <label>Téléphone</label>
-        <input type="tel" name="Téléphone">
+        <input type="tel" placeholder="06 00 00 00 00" required>
+
+        <label>Catégorie</label>
+        <select required>
+            <option value="">-- Choisir une catégorie --</option>
+            <option>Batterie</option>
+            <option>Écran</option>
+            <option>Accessoire</option>
+        </select>
 
         <label>Produit souhaité</label>
-        <input type="text" name="Produit" placeholder="Ex : Batterie iPhone 11" required>
+        <select required>
+            <option value="">-- Choisir un produit --</option>
 
-        <label>Message</label>
-        <textarea name="Message" placeholder="Précisez le modèle, quantité, urgence…"></textarea>
+            <!-- BATTERIES -->
+            <option>Batterie iPhone</option>
+            <option>Batterie iPhone XR / XS</option>
+            <option>Batterie Samsung</option>
+            <option>Batterie Xiaomi</option>
 
-        <button type="submit">Envoyer ma demande</button>
+            <!-- ÉCRANS -->
+            <option>Écran iPhone</option>
+            <option>Écran Samsung</option>
+            <option>Écran Xiaomi</option>
+
+            <!-- ACCESSOIRES -->
+            <option>Chargeur</option>
+            <option>Câble USB</option>
+            <option>Coque de protection</option>
+        </select>
+
+        <label>Message (modèle exact, couleur, infos…)</label>
+        <textarea placeholder="Ex : iPhone 11, écran noir, batterie originale"></textarea>
+
+        <button type="submit">Envoyer la commande</button>
+
     </form>
+
+    <p class="rdv-info">
+        ⚠️ La commande sera confirmée après vérification de la disponibilité.
+    </p>
+
 </section>
 
 <footer>
-    <p>© 2026 – LCV Téléphonie & Informatique</p>
+    <p>© 2026 LCV Téléphonie & Informatique</p>
+    <p>
+        <a href="index.html">Accueil</a> |
+        <a href="mentions-legales.html">Mentions légales</a>
+    </p>
 </footer>
 
 </body>
