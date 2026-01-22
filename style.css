@@ -554,38 +554,36 @@ h1 {
 .btn-commande:hover {
     background-color: #062bd9;
 }
-.btn-accueil {
-    display: inline-flex;
-    align-items: center;
+a.btn-accueil {
+    display: inline-flex !important;
+    align-items: center !important;
     gap: 8px;
 
-    margin: 20px;
-    padding: 10px 22px;
+    margin: 25px !important;
+    padding: 12px 26px !important;
 
-    background: linear-gradient(135deg, #0a3cff, #3b6cff);
-    color: white;
+    background: linear-gradient(135deg, #0a3cff, #3b6cff) !important;
+    color: #ffffff !important;
 
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
+    font-weight: bold !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
 
-    border-radius: 30px;
-    box-shadow: 0 4px 12px rgba(10,60,255,0.35);
+    border-radius: 30px !important;
+    box-shadow: 0 6px 18px rgba(10,60,255,0.4) !important;
 
-    transition: all 0.25s ease;
+    transition: all 0.25s ease !important;
 }
 
-.btn-accueil::before {
-    content: "🏠";
-    font-size: 16px;
+a.btn-accueil::before {
+    content: "🏠" !important;
 }
 
-.btn-accueil:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(10,60,255,0.45);
-    background: linear-gradient(135deg, #062bd9, #2f55e6);
+a.btn-accueil:hover {
+    background: linear-gradient(135deg, #062bd9, #2f55e6) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 22px rgba(10,60,255,0.55) !important;
 }
-
 
 
 
