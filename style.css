@@ -387,5 +387,21 @@ h2 {
     background: #062bd9;
 }
 
+/* ===== FOND DU SITE ===== */
+
+body {
+    background-image: url("fond.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+section, header {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    border-radius: 12px;
+    padding: 40px 20px;
+}
+
 
 
