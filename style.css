@@ -494,36 +494,7 @@ h1 {
     background: #062bd9;
 }
 
-/* ===== FORMULAIRE COMMANDE ===== */
 
-.commande-section {
-    margin-top: 60px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.commande-section form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.commande-section input,
-.commande-section textarea {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.commande-section button {
-    background: #0a3cff;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
 /* ===== MENU DÉROULANT ===== */
 
 .navbar {
@@ -569,6 +540,21 @@ h1 {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.btn-commande {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 12px 20px;
+    background-color: #0a3cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-commande:hover {
+    background-color: #062bd9;
+}
+
 
 
 
