@@ -5,14 +5,13 @@
     <title>Batteries - LCV Téléphonie & Informatique</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <script>
-function filterProducts(category) {
+<script>
+function filterProducts(category, button) {
     const products = document.querySelectorAll('.service');
     const buttons = document.querySelectorAll('.filter-btn');
 
     buttons.forEach(btn => btn.classList.remove('active'));
-
-    event.target.classList.add('active');
+    button.classList.add('active');
 
     products.forEach(product => {
         if (category === 'all' || product.dataset.category === category) {
@@ -23,6 +22,7 @@ function filterProducts(category) {
     });
 }
 </script>
+
 <body>
 
 <header>
@@ -31,36 +31,34 @@ function filterProducts(category) {
     <p>Remplacement & vente de batteries</p>
 </header>
 <div class="filters">
-    <button class="filter-btn active" onclick="filterProducts('all')">Tous</button>
-    <button class="filter-btn" onclick="filterProducts('iphone')">iPhone</button>
-    <button class="filter-btn" onclick="filterProducts('android')">Android</button>
+    <button class="filter-btn active" onclick="filterProducts('all', this)">Tous</button>
+    <button class="filter-btn" onclick="filterProducts('iphone', this)">iPhone</button>
+    <button class="filter-btn" onclick="filterProducts('android', this)">Android</button>
 </div>
+
 
 <section class="services">
 
-    <div class="service">
-        <img src="batterie.jpg" alt="Batterie smartphone" style="width:100%; border-radius:10px;">
-        <h3>Batterie smartphone</h3>
-        <p>Batterie neuve compatible plusieurs modèles</p>
-        <strong>49 €</strong><br><br>
-        <a href="produit-batterie.html" class="btn-primary">Voir le produit</a>
-    </div>
+   <section class="services">
 
-    <div class="service">
-        <img src="batterie.jpg" alt="Batterie iPhone" style="width:100%; border-radius:10px;">
+    <div class="service" data-category="iphone">
+        <img src="batterie.jpg" alt="Batterie iPhone">
         <h3>Batterie iPhone</h3>
-        <p>Remplacement batterie iPhone (selon modèle)</p>
+        <p>Remplacement batterie iPhone</p>
         <strong>59 €</strong><br><br>
         <a href="produit-batterie.html" class="btn-primary">Voir le produit</a>
     </div>
 
-    <div class="service">
-        <img src="batterie.jpg" alt="Batterie Android" style="width:100%; border-radius:10px;">
+    <div class="service" data-category="android">
+        <img src="batterie.jpg" alt="Batterie Android">
         <h3>Batterie Android</h3>
         <p>Samsung, Xiaomi, Huawei…</p>
         <strong>45 €</strong><br><br>
         <a href="produit-batterie.html" class="btn-primary">Voir le produit</a>
     </div>
+
+</section>
+
 
 </section>
 
