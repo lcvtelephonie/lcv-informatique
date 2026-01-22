@@ -2,92 +2,60 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Batteries - LCV Téléphonie & Informatique</title>
+    <title>Batteries – LCV Téléphonie & Informatique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-<script>
-function filterProducts(category, button) {
-    const products = document.querySelectorAll('.service');
-    const buttons = document.querySelectorAll('.filter-btn');
-
-    buttons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
-
-    products.forEach(product => {
-        if (category === 'all' || product.dataset.category === category) {
-            product.style.display = "block";
-        } else {
-            product.style.display = "none";
-        }
-    });
-}
-</script>
-<a href="index.html" class="btn-retour">← Retour à l’accueil</a>
 
 <body>
+
+<a href="index.html" class="btn-retour">← Retour à l’accueil</a>
 
 <header>
     <img src="logo.png" class="logo" alt="LCV">
     <h1>Batteries</h1>
     <p>Remplacement & vente de batteries</p>
 </header>
+
+<!-- FILTRES -->
 <div class="filters">
     <button class="filter-btn active" onclick="filterProducts('all', this)">Tous</button>
     <button class="filter-btn" onclick="filterProducts('iphone', this)">iPhone</button>
     <button class="filter-btn" onclick="filterProducts('android', this)">Android</button>
 </div>
 
-
-<section class="services">
-
-   <section class="services">
-
-    <div class="service" data-category="iphone">
-        <img src="batterie.jpg" alt="Batterie iPhone">
-        <h3>Batterie iPhone</h3>
-        <p>Remplacement batterie iPhone</p>
-        <strong>59 €</strong><br><br>
-        <a href="produit-batterie.html" class="btn-primary">Voir le produit</a>
-    </div>
-
-    <div class="service" data-category="android">
-        <img src="batterie.jpg" alt="Batterie Android">
-        <h3>Batterie Android</h3>
-        <p>Samsung, Xiaomi, Huawei…</p>
-        <strong>45 €</strong><br><br>
-        <a href="produit-batterie.html" class="btn-primary">Voir le produit</a>
-    </div>
-
-</section>
+<!-- PRODUITS -->
 <section class="produits">
-    <h2>Batteries disponibles</h2>
 
-    <div class="produit">
+    <div class="produit" data-category="iphone">
         <img src="batterie-iphone.jpg" alt="Batterie iPhone">
         <h3>Batterie iPhone</h3>
         <p>Remplacement batterie compatible iPhone</p>
+        <strong>59 €</strong>
 
         <button onclick="commanderProduit('Batterie iPhone')">
             Commander
         </button>
     </div>
 
-    <div class="produit">
+    <div class="produit" data-category="android">
         <img src="batterie-android.jpg" alt="Batterie Android">
         <h3>Batterie Android</h3>
-        <p>Remplacement batterie compatible Android</p>
+        <p>Samsung, Xiaomi, Huawei…</p>
+        <strong>45 €</strong>
 
         <button onclick="commanderProduit('Batterie Android')">
             Commander
         </button>
     </div>
+
 </section>
+
+<!-- FORMULAIRE COMMANDE -->
 <section id="commande" class="commande-section">
     <h2>Commander un produit</h2>
 
     <form action="https://formsubmit.co/lcvtelephonie@gmail.com" method="POST">
-
-        <!-- Produit sélectionné -->
         <input type="hidden" name="Produit" id="produitChoisi">
 
         <label>Nom</label>
@@ -106,10 +74,6 @@ function filterProducts(category, button) {
     </form>
 </section>
 
-
-
-</section>
-
 <footer>
     <p>© 2026 LCV Téléphonie & Informatique</p>
     <p>
@@ -117,13 +81,31 @@ function filterProducts(category, button) {
         <a href="mentions-legales.html">Mentions légales</a>
     </p>
 </footer>
-    <script>
+
+<!-- SCRIPTS -->
+<script>
+function filterProducts(category, button) {
+    const products = document.querySelectorAll('.produit');
+    const buttons = document.querySelectorAll('.filter-btn');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    products.forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+            product.style.display = "flex";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
 function commanderProduit(nomProduit) {
     document.getElementById("produitChoisi").value = nomProduit;
     document.getElementById("commande").scrollIntoView({ behavior: "smooth" });
 }
 </script>
 
-
 </body>
 </html>
+
