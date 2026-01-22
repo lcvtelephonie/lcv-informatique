@@ -524,6 +524,52 @@ h1 {
     border-radius: 8px;
     font-weight: bold;
 }
+/* ===== MENU DÉROULANT ===== */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #0a3cff;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    top: 30px;
+    left: 0;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #0a3cff;
+}
+
+.dropdown-content a:hover {
+    background: #f2f6ff;
+}
+
+/* Affichage au survol */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 
 
