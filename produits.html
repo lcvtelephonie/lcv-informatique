@@ -59,6 +59,53 @@ function filterProducts(category, button) {
     </div>
 
 </section>
+<section class="produits">
+    <h2>Batteries disponibles</h2>
+
+    <div class="produit">
+        <img src="batterie-iphone.jpg" alt="Batterie iPhone">
+        <h3>Batterie iPhone</h3>
+        <p>Remplacement batterie compatible iPhone</p>
+
+        <button onclick="commanderProduit('Batterie iPhone')">
+            Commander
+        </button>
+    </div>
+
+    <div class="produit">
+        <img src="batterie-android.jpg" alt="Batterie Android">
+        <h3>Batterie Android</h3>
+        <p>Remplacement batterie compatible Android</p>
+
+        <button onclick="commanderProduit('Batterie Android')">
+            Commander
+        </button>
+    </div>
+</section>
+<section id="commande" class="commande-section">
+    <h2>Commander un produit</h2>
+
+    <form action="https://formsubmit.co/lcvtelephonie@gmail.com" method="POST">
+
+        <!-- Produit sélectionné -->
+        <input type="hidden" name="Produit" id="produitChoisi">
+
+        <label>Nom</label>
+        <input type="text" name="Nom" required>
+
+        <label>Téléphone</label>
+        <input type="tel" name="Téléphone" required>
+
+        <label>Email</label>
+        <input type="email" name="Email">
+
+        <label>Message (optionnel)</label>
+        <textarea name="Message"></textarea>
+
+        <button type="submit">Envoyer la commande</button>
+    </form>
+</section>
+
 
 
 </section>
@@ -70,6 +117,13 @@ function filterProducts(category, button) {
         <a href="mentions-legales.html">Mentions légales</a>
     </p>
 </footer>
+    <script>
+function commanderProduit(nomProduit) {
+    document.getElementById("produitChoisi").value = nomProduit;
+    document.getElementById("commande").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
 
 </body>
 </html>
