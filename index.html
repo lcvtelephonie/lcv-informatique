@@ -44,22 +44,27 @@
     </ul>
 </section>
 <section class="rdv-section">
-    <h2>Prendre rendez-vous</h2>
-    <p>
-        Sélectionnez un créneau disponible directement dans notre agenda en ligne.
-        Choisissez le service souhaité et confirmez votre rendez-vous en quelques secondes.
-    </p>
+    <h2>Demande de rendez-vous</h2>
+    <p>Remplissez le formulaire, nous vous recontactons rapidement.</p>
 
-    <div class="rdv-box">
-        <a href="https://calendar.google.com/" target="_blank" class="btn-primary">
-            📅 Prendre rendez-vous en ligne
-        </a>
-    </div>
+    <form action="mailto:TONEMAIL@gmail.com" method="post" enctype="text/plain" class="rdv-form">
+        <input type="text" name="Nom" placeholder="Votre nom" required>
+        <input type="tel" name="Téléphone" placeholder="Votre téléphone" required>
 
-    <p class="rdv-info">
-        📞 Besoin d’aide ? Contactez-nous par téléphone.
-    </p>
+        <select name="Service" required>
+            <option value="">Choisir un service</option>
+            <option>Batterie iPhone</option>
+            <option>Batterie Android</option>
+            <option>Dépannage informatique</option>
+            <option>Autre</option>
+        </select>
+
+        <textarea name="Message" placeholder="Expliquez votre problème"></textarea>
+
+        <button type="submit" class="btn-primary">Envoyer la demande</button>
+    </form>
 </section>
+
 
 <footer>
     <p>© 2026 LCV Téléphonie & Informatique</p>
@@ -70,6 +75,7 @@
 
 </body>
 </html>
+
 
 
 
