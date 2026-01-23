@@ -20,23 +20,25 @@
 <section class="rdv">
 
 <form>
-   <label for="codePromo">Code promo</label>
+    
+<label for="codePromo">Code promo</label>
 
-<div class="promo-box">
+<div style="display:flex; gap:12px; align-items:center;">
     <input
         type="text"
         id="codePromo"
-        placeholder="Ex : LCV10">
+        placeholder="Ex : LCV10"
+        style="flex:1;">
 
-    <button type="button" class="btn-promo" onclick="appliquerPromo()">
+    <button
+        type="button"
+        onclick="appliquerPromo()">
         Appliquer
     </button>
 </div>
 
-<p id="promoMessage" class="promo-message"></p>
+<p id="promoMessage" style="font-weight:bold; margin-top:8px;"></p>
 
-
-<p id="promoMessage" style="font-weight:bold; margin-top:10px;"></p>
 
 
 
@@ -135,6 +137,7 @@ function appliquerPromo() {
 
 </body>
 </html>
+
 
 
 
