@@ -656,6 +656,18 @@ header p.sous-titre {
 body, p, label, li, span, small {
     color: #0a3cff;
 }
+/* ===== FORCE TEXTE EN BLEU ===== */
+body p,
+body label,
+body li,
+body span,
+body small,
+body h1,
+body h2,
+body h3 {
+    color: #0a3cff !important;
+}
+
 
 
 
