@@ -746,6 +746,13 @@ header .texte-commande {
     margin-top: 8px;
     font-weight: bold;
 }
+/* ===== FIX LARGEUR CODE PROMO ===== */
+
+#codePromo {
+    width: 100% !important;
+    min-width: 260px;
+}
+
 
 
 
