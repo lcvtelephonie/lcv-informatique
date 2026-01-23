@@ -108,24 +108,34 @@ function filtrerProduits() {
 }
 </script>
 <script>
+<script>
 function appliquerPromo() {
     const code = document.getElementById("codePromo").value.trim().toUpperCase();
     const message = document.getElementById("promoMessage");
 
-    if (code === "MEHDI10") {
+    if (code === "LCV10") {
         message.style.color = "#0a3cff";
         message.textContent = "🎉 Code promo appliqué : -10%";
-    } else if (code === "") {
+    } 
+    else if (code === "MEHDI30") {
+        message.style.color = "#0a3cff";
+        message.textContent = "🎉 Code promo parthenaire : -30%";
+    } 
+    else if (code === "") {
         message.textContent = "";
-    } else {
+    } 
+    else {
         message.style.color = "red";
         message.textContent = "❌ Code promo invalide";
     }
 }
 </script>
 
+</script>
+
 </body>
 </html>
+
 
 
 
