@@ -644,8 +644,15 @@ button:hover,
     transition: width 0.3s ease;
 }
 
-.nav-links li a:hover::after {
+.nav-links li a:hover::after{
     width: 100%;
+    
+.sous-titre {
+    color: #0a3cff;       /* couleur du texte */
+    font-size: 18px;      /* taille */
+    font-weight: 500;     /* épaisseur */
+}
+
 
 
 
