@@ -40,34 +40,36 @@
 <label>Téléphone</label>
 <input type="tel" name="telephone" required>
 
-  <label>Catégorie</label>
-    <select id="categorie" onchange="filtrerProduits()" required>
-        <option value="">-- Choisir une catégorie --</option>
-        <option value="batterie">Batterie</option>
-        <option value="ecran">Écran</option>
-        <option value="accessoire">Accessoire</option>
-    </select>
+ <label>Catégorie</label>
+<select id="categorie" name="categorie" onchange="filtrerProduits()" required>
+    <option value="">-- Choisir une catégorie --</option>
+    <option value="Batterie">Batterie</option>
+    <option value="Écran">Écran</option>
+    <option value="Accessoire">Accessoire</option>
+</select>
+
 
     <label>Produit souhaité</label>
-    <select id="produit" required>
-        <option value="">-- Choisir un produit --</option>
+<select id="produit" name="produit" required>
+    <option value="">-- Choisir un produit --</option>
 
-        <!-- BATTERIES -->
-        <option data-cat="batterie">Batterie iPhone</option>
-        <option data-cat="batterie">Batterie Samsung</option>
-        <option data-cat="batterie">Batterie Xiaomi</option>
+    <!-- BATTERIES -->
+    <option data-cat="batterie" value="Batterie iPhone">Batterie iPhone</option>
+    <option data-cat="batterie" value="Batterie Samsung">Batterie Samsung</option>
+    <option data-cat="batterie" value="Batterie Xiaomi">Batterie Xiaomi</option>
 
-        <!-- ÉCRANS -->
-        <option data-cat="ecran">Écran iPhone</option>
-        <option data-cat="ecran">Écran Samsung</option>
-        <option data-cat="ecran">Écran Xiaomi</option>
+    <!-- ÉCRANS -->
+    <option data-cat="ecran" value="Écran iPhone">Écran iPhone</option>
+    <option data-cat="ecran" value="Écran Samsung">Écran Samsung</option>
+    <option data-cat="ecran" value="Écran Xiaomi">Écran Xiaomi</option>
 
-        <!-- ACCESSOIRES -->
-        <option data-cat="accessoire">Chargeur</option>
-        <option data-cat="accessoire">Câble USB</option>
-        <option data-cat="accessoire">Coque de protection</option>
-        <option data-cat="accessoire">Verre trempé</option>
-    </select>
+    <!-- ACCESSOIRES -->
+    <option data-cat="accessoire" value="Chargeur">Chargeur</option>
+    <option data-cat="accessoire" value="Câble USB">Câble USB</option>
+    <option data-cat="accessoire" value="Coque de protection">Coque de protection</option>
+    <option data-cat="accessoire" value="Verre trempé">Verre trempé</option>
+</select>
+
 
 <label>Message</label>
 <textarea name="message"></textarea>
@@ -127,6 +129,7 @@ function appliquerPromo() {
     }
 }
 </script>
+
 
 
 
