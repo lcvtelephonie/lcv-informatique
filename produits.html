@@ -2,9 +2,79 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Batteries - LCV Téléphonie & Informatique</title>
+    <title>Produits - LCV Téléphonie & Informatique</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
+
+<!-- BOUTON RETOUR ACCUEIL -->
+<a href="index.html" class="btn-retour">← Accueil</a>
+
+<header>
+    <img src="logo.png" class="logo" alt="LCV">
+    <h1>Nos Produits</h1>
+    <p>Dépannage & vente téléphonie / informatique</p>
+</header>
+
+<!-- FILTRES -->
+<div class="filters">
+    <button class="filter-btn active" onclick="filterProducts('all', this)">Tous</button>
+    <button class="filter-btn" onclick="filterProducts('batterie', this)">Batteries</button>
+    <button class="filter-btn" onclick="filterProducts('ecran', this)">Écrans</button>
+    <button class="filter-btn" onclick="filterProducts('accessoire', this)">Accessoires</button>
+    <button class="filter-btn" onclick="filterProducts('promo', this)">Promotions</button>
+</div>
+
+<!-- PRODUITS -->
+<section class="services">
+
+    <!-- BATTERIE -->
+    <div class="service" data-category="batterie">
+        <img src="batterie.jpg" alt="Batterie téléphone">
+        <h3>Batterie smartphone</h3>
+        <p>Remplacement batterie iPhone & Android</p>
+        <strong>À partir de 45 €</strong><br><br>
+        <a href="commande.html" class="btn-primary">Commander</a>
+    </div>
+
+    <!-- ECRAN -->
+    <div class="service" data-category="ecran">
+        <img src="ecran.jpg" alt="Écran smartphone">
+        <h3>Écran smartphone</h3>
+        <p>Écran cassé ? Remplacement rapide</p>
+        <strong>À partir de 69 €</strong><br><br>
+        <a href="commande.html" class="btn-primary">Commander</a>
+    </div>
+
+    <!-- ACCESSOIRES -->
+    <div class="service" data-category="accessoire">
+        <img src="accessoire.jpg" alt="Accessoires téléphone">
+        <h3>Accessoires</h3>
+        <p>Chargeurs, coques, câbles, écouteurs</p>
+        <strong>Dès 10 €</strong><br><br>
+        <a href="commande.html" class="btn-primary">Commander</a>
+    </div>
+
+    <!-- PROMOTION -->
+    <div class="service" data-category="promo">
+        <img src="promo.jpg" alt="Promotion réparation">
+        <h3>Offre spéciale</h3>
+        <p>-10% sur réparation batterie</p>
+        <strong>Offre limitée</strong><br><br>
+        <a href="commande.html" class="btn-primary">Profiter</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 LCV Téléphonie & Informatique</p>
+    <p>
+        <a href="index.html">Accueil</a> |
+        <a href="mentions-legales.html">Mentions légales</a>
+    </p>
+</footer>
+
+<!-- SCRIPT FILTRE -->
 <script>
 function filterProducts(category, button) {
     const products = document.querySelectorAll('.service');
@@ -22,110 +92,6 @@ function filterProducts(category, button) {
     });
 }
 </script>
-<a href="index.html" class="btn-retour">← Retour à l’accueil</a>
-
-<body>
-
-<header>
-    <img src="logo.png" class="logo" alt="LCV">
-    <h1>Batteries</h1>
-    <p>Remplacement & vente de batteries</p>
-</header>
-<div class="filters">
-    <button class="filter-btn active" onclick="filterProducts('all', this)">Tous</button>
-    <button class="filter-btn" onclick="filterProducts('iphone', this)">iPhone</button>
-    <button class="filter-btn" onclick="filterProducts('android', this)">Android</button>
-</div>
-
-
-<section class="services">
-
-   <section class="services">
-
-    <div class="service" data-category="iphone">
-        <img src="batterie.jpg" alt="Batterie iPhone">
-        <h3>Batterie iPhone</h3>
-        <p>Remplacement batterie iPhone</p>
-        <strong>59 €</strong><br><br>
-        <a href="produit-batterie.html" class="btn-primary">Voir le produit</a>
-    </div>
-
-    <div class="service" data-category="android">
-        <img src="batterie.jpg" alt="Batterie Android">
-        <h3>Batterie Android</h3>
-        <p>Samsung, Xiaomi, Huawei…</p>
-        <strong>45 €</strong><br><br>
-        <a href="produit-batterie.html" class="btn-primary">Voir le produit</a>
-    </div>
-
-</section>
-<section class="produits">
-    <h2>Batteries disponibles</h2>
-
-    <div class="produit">
-        <h3>Batterie iPhone</h3>
-        <p>Remplacement batterie compatible iPhone</p>
-
-        <button onclick="commanderProduit('Batterie iPhone')">
-            Commander
-        </button>
-    </div>
-
-    <div class="produit">
-        <h3>Batterie Android</h3>
-        <p>Remplacement batterie compatible Android</p>
-
-        <button onclick="commanderProduit('Batterie Android')">
-            Commander
-        </button>
-    </div>
-</section>
-<section id="commande" class="commande-section">
-    <h2>Commander un produit</h2>
-
-    <form action="https://formsubmit.co/lcvtelephonie@gmail.com" method="POST">
-
-        <!-- Produit sélectionné -->
-        <input type="hidden" name="Produit" id="produitChoisi">
-
-        <label>Nom</label>
-        <input type="text" name="Nom" required>
-
-        <label>Téléphone</label>
-        <input type="tel" name="Téléphone" required>
-
-        <label>Email</label>
-        <input type="email" name="Email">
-
-        <label>Message (optionnel)</label>
-        <textarea name="Message"></textarea>
-
-        <button type="submit">Envoyer la commande</button>
-    </form>
-</section>
-
-
-
-</section>
-
-<footer>
-    <p>© 2026 LCV Téléphonie & Informatique</p>
-    <p>
-        <a href="index.html">Accueil</a> |
-        <a href="mentions-legales.html">Mentions légales</a>
-    </p>
-</footer>
-    <script>
-function commanderProduit(nomProduit) {
-    document.getElementById("produitChoisi").value = nomProduit;
-    document.getElementById("commande").scrollIntoView({ behavior: "smooth" });
-}
-</script>
-
 
 </body>
-
-
-
-</body>
-
+</html>
