@@ -681,7 +681,7 @@ header .texte-commande {
     color: #0a3cff;
     font-weight: 500;
 }
-/* ===== BANDEAU PROMO DÉFILANT (ANTI-BUG) ===== */
+/* ================= BANDEAU PROMO ================= */
 
 .promo-wrapper {
     width: 100%;
@@ -692,8 +692,7 @@ header .texte-commande {
 
 .promo-track {
     display: flex;
-    width: max-content;
-    animation: promo-scroll 12s linear infinite;
+    animation: promo-scroll 14s linear infinite;
 }
 
 .promo-track span {
@@ -701,22 +700,24 @@ header .texte-commande {
     padding-right: 60px;
     font-weight: bold;
     font-size: 16px;
-    color: #ffffff;
+    color: white;
 }
 
 @keyframes promo-scroll {
     from {
-        transform: translateX(0);
+        transform: translateX(100%);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
+}
 
+/* ================= TEXTE COMMANDE ================= */
 
-
-
-
-
+.texte-commande {
+    color: #0a3cff;
+    font-weight: 500;
+}
 
 
 
