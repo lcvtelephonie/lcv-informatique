@@ -681,32 +681,35 @@ header .texte-commande {
     color: #0a3cff;
     font-weight: 500;
 }
-/* ===== BANDEAU PROMO DÉFILANT ===== */
+/* ===== BANDEAU PROMO DÉFILANT (CORRIGÉ) ===== */
 
 .promo-banner {
     width: 100%;
-    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    background: linear-gradient(135deg, #0a3cff, #3b6cff);
     overflow: hidden;
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 .promo-text {
-    white-space: nowrap;
     display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: scroll-promo 12s linear infinite;
+
+    color: #ffffff !important;
     font-weight: bold;
     font-size: 16px;
-    color: #000;
-    animation: defilement 12s linear infinite;
 }
 
-@keyframes defilement {
-    from {
-        transform: translateX(100%);
+@keyframes scroll-promo {
+    0% {
+        transform: translateX(0);
     }
-    to {
+    100% {
         transform: translateX(-100%);
     }
-}
+
+
 
 
 
