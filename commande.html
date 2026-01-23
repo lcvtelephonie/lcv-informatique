@@ -25,66 +25,42 @@
 <label for="codePromo">Code promo</label>
 
 <div style="display:flex; gap:12px; align-items:center;">
-    <input
-        type="text"
-        id="codePromo"
-        placeholder="Ex : LCV10"
-        style="flex:1;">
-
-    <button
-        type="button"
-        onclick="appliquerPromo()">
-        Appliquer
-    </button>
+    <input type="text" id="codePromo" name="code_promo" placeholder="Ex : LCV10">
+    <button type="button" onclick="appliquerPromo()">Appliquer</button>
 </div>
 
-<p id="promoMessage" style="font-weight:bold; margin-top:8px;"></p>
+<p id="promoMessage"></p>
 
+<label>Nom & Prénom</label>
+<input type="text" name="nom" required>
 
+<label>Email</label>
+<input type="email" name="email" required>
 
+<label>Téléphone</label>
+<input type="tel" name="telephone" required>
 
-    <label>Nom & Prénom</label>
-    <input type="text" required>
+<label>Catégorie</label>
+<select id="categorie" name="categorie" onchange="filtrerProduits()" required>
+    <option value="">-- Choisir --</option>
+    <option value="batterie">Batterie</option>
+    <option value="ecran">Écran</option>
+    <option value="accessoire">Accessoire</option>
+</select>
 
-    <label>Email</label>
-    <input type="email" required>
+<label>Produit souhaité</label>
+<select id="produit" name="produit" required>
+    <option value="">-- Choisir --</option>
+    <option>Batterie iPhone</option>
+    <option>Écran Samsung</option>
+    <option>Verre trempé</option>
+</select>
 
-    <label>Téléphone</label>
-    <input type="tel" required>
+<label>Message</label>
+<textarea name="message"></textarea>
 
-    <label>Catégorie</label>
-    <select id="categorie" onchange="filtrerProduits()" required>
-        <option value="">-- Choisir une catégorie --</option>
-        <option value="batterie">Batterie</option>
-        <option value="ecran">Écran</option>
-        <option value="accessoire">Accessoire</option>
-    </select>
+<button type="submit">Envoyer la commande</button>
 
-    <label>Produit souhaité</label>
-    <select id="produit" required>
-        <option value="">-- Choisir un produit --</option>
-
-        <!-- BATTERIES -->
-        <option data-cat="batterie">Batterie iPhone</option>
-        <option data-cat="batterie">Batterie Samsung</option>
-        <option data-cat="batterie">Batterie Xiaomi</option>
-
-        <!-- ÉCRANS -->
-        <option data-cat="ecran">Écran iPhone</option>
-        <option data-cat="ecran">Écran Samsung</option>
-        <option data-cat="ecran">Écran Xiaomi</option>
-
-        <!-- ACCESSOIRES -->
-        <option data-cat="accessoire">Chargeur</option>
-        <option data-cat="accessoire">Câble USB</option>
-        <option data-cat="accessoire">Coque de protection</option>
-        <option data-cat="accessoire">Verre trempé</option>
-    </select>
-
-    <label>Message</label>
-    <textarea placeholder="Modèle exact, couleur, infos…"></textarea>
-
-    <button type="submit">Envoyer la commande</button>
 
 </form>
     <input type="hidden" name="_subject" value="📦 Nouvelle commande LCV">
@@ -138,6 +114,7 @@ function appliquerPromo() {
     }
 }
 </script>
+
 
 
 
