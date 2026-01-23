@@ -667,6 +667,11 @@ body h2,
 body h3 {
     color: #0a3cff !important;
 }
+.texte-commande {
+    color: #0a3cff;
+    font-weight: 500;
+}
+
 
 
 
