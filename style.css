@@ -752,6 +752,17 @@ header .texte-commande {
     width: 100% !important;
     min-width: 260px;
 }
+/* ===== FIX MENU MOBILE AU-DESSUS DU HEADER ===== */
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-links {
+    z-index: 9999;
+}
+
 
 
 
