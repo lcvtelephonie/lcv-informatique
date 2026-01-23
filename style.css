@@ -676,9 +676,12 @@ header .texte-commande {
     font-size: 16px;
     margin-top: 10px;
 }
+/* TEXTE COMMANDE EN BLEU */
 header .texte-commande {
-    color: #0a3cff !important;
+    color: #0a3cff;
+    font-weight: 500;
 }
+
 
 
 
