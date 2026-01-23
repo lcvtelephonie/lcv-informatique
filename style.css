@@ -709,6 +709,11 @@ header .texte-commande {
     color: #0a3cff;
     font-weight: 500;
 }
+.promo-wrapper,
+.promo-wrapper span {
+    color: #ffffff;
+}
+
 
 
 
