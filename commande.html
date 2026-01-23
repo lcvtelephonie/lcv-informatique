@@ -9,7 +9,6 @@
 
 <body>
 
-<!-- RETOUR -->
 <a href="produits.html" class="btn-retour">← Retour aux produits</a>
 
 <header>
@@ -19,69 +18,75 @@
 
 <section class="rdv">
 
-    <form action="#" method="post">
+<form>
 
-        <label>Nom & Prénom</label>
-        <input type="text" placeholder="Votre nom" required>
+    <label>Nom & Prénom</label>
+    <input type="text" required>
 
-        <label>Email</label>
-        <input type="email" placeholder="exemple@mail.com" required>
+    <label>Email</label>
+    <input type="email" required>
 
-        <label>Téléphone</label>
-        <input type="tel" placeholder="06 00 00 00 00" required>
+    <label>Téléphone</label>
+    <input type="tel" required>
 
-        <label>Catégorie</label>
-        <select required>
-            <option value="">-- Choisir une catégorie --</option>
-            <option>Batterie</option>
-            <option>Écran</option>
-            <option>Accessoire</option>
-        </select>
+    <label>Catégorie</label>
+    <select id="categorie" onchange="filtrerProduits()" required>
+        <option value="">-- Choisir une catégorie --</option>
+        <option value="batterie">Batterie</option>
+        <option value="ecran">Écran</option>
+        <option value="accessoire">Accessoire</option>
+    </select>
 
-        <label>Produit souhaité</label>
-        <select required>
-            <option value="">-- Choisir un produit --</option>
+    <label>Produit souhaité</label>
+    <select id="produit" required>
+        <option value="">-- Choisir un produit --</option>
 
-            <!-- BATTERIES -->
-            <option>Batterie iPhone</option>
-            <option>Batterie iPhone XR / XS</option>
-            <option>Batterie Samsung</option>
-            <option>Batterie Xiaomi</option>
+        <!-- BATTERIES -->
+        <option data-cat="batterie">Batterie iPhone</option>
+        <option data-cat="batterie">Batterie Samsung</option>
+        <option data-cat="batterie">Batterie Xiaomi</option>
 
-            <!-- ÉCRANS -->
-            <option>Écran iPhone</option>
-            <option>Écran Samsung</option>
-            <option>Écran Xiaomi</option>
+        <!-- ÉCRANS -->
+        <option data-cat="ecran">Écran iPhone</option>
+        <option data-cat="ecran">Écran Samsung</option>
+        <option data-cat="ecran">Écran Xiaomi</option>
 
-            <!-- ACCESSOIRES -->
-            <option>Chargeur</option>
-            <option>Câble USB</option>
-            <option>Coque de protection</option>
-            <option>Verre trempé</option>
+        <!-- ACCESSOIRES -->
+        <option data-cat="accessoire">Chargeur</option>
+        <option data-cat="accessoire">Câble USB</option>
+        <option data-cat="accessoire">Coque de protection</option>
+        <option data-cat="accessoire">Verre trempé</option>
+    </select>
 
-        </select>
+    <label>Message</label>
+    <textarea placeholder="Modèle exact, couleur, infos…"></textarea>
 
-        <label>Message (modèle exact, couleur, infos…)</label>
-        <textarea placeholder="Ex : iPhone 11, écran noir, batterie originale"></textarea>
+    <button type="submit">Envoyer la commande</button>
 
-        <button type="submit">Envoyer la commande</button>
-
-    </form>
-
-    <p class="rdv-info">
-        ⚠️ La commande sera confirmée après vérification de la disponibilité.
-    </p>
+</form>
 
 </section>
 
 <footer>
     <p>© 2026 LCV Téléphonie & Informatique</p>
-    <p>
-        <a href="index.html">Accueil</a> |
-        <a href="mentions-legales.html">Mentions légales</a>
-    </p>
 </footer>
+
+<!-- SCRIPT AUTOMATIQUE -->
+<script>
+function filtrerProduits() {
+    const categorie = document.getElementById("categorie").value;
+    const produits = document.querySelectorAll("#produit option");
+
+    produits.forEach(option => {
+        if (!option.dataset.cat) return;
+
+        option.style.display =
+            option.dataset.cat === categorie ? "block" : "none";
+    });
+
+    document.getElementById("produit").value = "";
+}
+</script>
 
 </body>
 </html>
-
