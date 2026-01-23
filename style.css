@@ -607,16 +607,7 @@ section, header {
         opacity: 1;
         transform: translateY(0);
     }
-.service,
-.produit {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service:hover,
-.produit:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
-}
+} 
 button,
 .btn-commande,
 .btn-accueil {
@@ -646,7 +637,7 @@ button:hover,
 
 .nav-links li a:hover::after{
     width: 100%;
-    
+}    
 header p.sous-titre {
     color: #0a3cff;
     font-size: 18px;
@@ -718,6 +709,7 @@ header .texte-commande {
     color: #0a3cff;
     font-weight: 500;
 }
+
 
 
 
