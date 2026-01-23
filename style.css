@@ -684,7 +684,7 @@ header .texte-commande {
 
 .promo-track {
     display: flex;
-    animation: promo-scroll 14s linear infinite;
+    animation: promo-scroll 30s linear infinite;
 }
 
 .promo-track span {
@@ -711,6 +711,7 @@ header .texte-commande {
     color: #0a3cff;
     font-weight: 500;
 }
+
 
 
 
