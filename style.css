@@ -679,7 +679,7 @@ header .texte-commande {
     overflow: hidden;
     background: linear-gradient(135deg, #0a3cff, #3b6cff);
     padding: 12px 0;
-    color: white; /* texte blanc par défaut */
+    color: #ffffff !important;
 }
 
 .promo-track {
@@ -692,7 +692,7 @@ header .texte-commande {
     padding-right: 60px;
     font-weight: bold;
     font-size: 16px;
-    color: white; /* sécurité */
+    color: #ffffff !important;
 }
 
 @keyframes promo-scroll {
@@ -711,6 +711,7 @@ header .texte-commande {
     color: #0a3cff;
     font-weight: 500;
 }
+
 
 
 
