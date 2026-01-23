@@ -647,11 +647,12 @@ button:hover,
 .nav-links li a:hover::after{
     width: 100%;
     
-.sous-titre {
-    color: #0a3cff;       /* couleur du texte */
-    font-size: 18px;      /* taille */
-    font-weight: 500;     /* épaisseur */
+header p.sous-titre {
+    color: #0a3cff;
+    font-size: 18px;
+    font-weight: 500;
 }
+
 
 
 
