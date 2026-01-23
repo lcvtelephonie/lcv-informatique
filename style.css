@@ -711,6 +711,42 @@ header .texte-commande {
     color: #0a3cff;
     font-weight: 500;
 }
+/* ===== CODE PROMO ===== */
+
+.promo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.promo-box input {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.btn-promo {
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    background: #0a3cff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-promo:hover {
+    background: #062bd9;
+}
+
+.promo-message {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
 
 
 
