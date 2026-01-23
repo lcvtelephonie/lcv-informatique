@@ -345,6 +345,7 @@ h2 {
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
+        z-index: 10001;
     }
 
     .nav-links {
@@ -352,16 +353,18 @@ h2 {
         flex-direction: column;
         background: #0a3cff;
         position: absolute;
-        top: 65px;
+        top: 100%;
         left: 0;
         width: 100%;
         padding: 20px;
+        z-index: 10000;
     }
 
     .nav-links.show {
         display: flex;
     }
 }
+
 
 /* ===== CONTACT ===== */
 
@@ -762,6 +765,7 @@ header .texte-commande {
 .nav-links {
     z-index: 9999;
 }
+
 
 
 
