@@ -652,6 +652,11 @@ header p.sous-titre {
     font-size: 18px;
     font-weight: 500;
 }
+/* ===== TEXTE EN BLEU ===== */
+body, p, label, li, span, small {
+    color: #0a3cff;
+}
+
 
 
 
