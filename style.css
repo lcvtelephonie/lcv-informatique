@@ -8,6 +8,10 @@ body {
     background-repeat: no-repeat;
     margin: 0;
     font-family: Arial, sans-serif;
+}
+
+/* Texte principal en bleu (sans casser les boutons) */
+p, h1, h2, h3, label {
     color: #0a3cff;
 }
 
@@ -19,6 +23,10 @@ header {
     text-align: center;
     padding: 40px 20px;
     border-radius: 14px;
+}
+
+header h1 {
+    color: white;
 }
 
 .logo {
@@ -81,10 +89,6 @@ header {
     width: 100%;
 }
 
-.nav-right {
-    margin-left: auto;
-}
-
 /* ================= MOBILE MENU ================= */
 
 @media (max-width: 768px) {
@@ -132,9 +136,9 @@ header {
     box-shadow: 0 8px 22px rgba(10,60,255,0.55);
 }
 
-/* ================= ANIMATION APPARITION ================= */
+/* ================= ANIMATION (SANS HEADER) ================= */
 
-section, header {
+section {
     animation: fadeUp 0.8s ease both;
 }
 
@@ -160,8 +164,7 @@ section, header {
 
 .promo-track {
     display: flex;
-    width: max-content;
-    animation: promo-scroll 12s linear infinite;
+    animation: promo-scroll 14s linear infinite;
 }
 
 .promo-track span {
@@ -174,10 +177,10 @@ section, header {
 
 @keyframes promo-scroll {
     from {
-        transform: translateX(0);
+        transform: translateX(100%);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -187,7 +190,6 @@ section, header {
     color: #0a3cff;
     font-weight: 500;
 }
-
 
 
 
