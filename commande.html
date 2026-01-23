@@ -21,65 +21,68 @@
 
 <form action="https://formsubmit.co/lcvtelephonie@gmail.com" method="POST">
 
-    
-<label for="codePromo">Code promo</label>
+    <!-- CONFIG FORMSUBMIT -->
+    <input type="hidden" name="_subject" value="📦 Nouvelle commande LCV">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="merci.html">
 
-<div style="display:flex; gap:12px; align-items:center;">
-    <input type="text" id="codePromo" name="code_promo" placeholder="Ex : LCV10">
-    <button type="button" onclick="appliquerPromo()">Appliquer</button>
-</div>
+    <!-- CODE PROMO -->
+    <label for="codePromo">Code promo</label>
+    <div style="display:flex; gap:12px; align-items:center;">
+        <input
+            type="text"
+            id="codePromo"
+            name="code_promo"
+            placeholder="Ex : LCV10">
+        <button type="button" onclick="appliquerPromo()">Appliquer</button>
+    </div>
 
-<p id="promoMessage"></p>
+    <p id="promoMessage"></p>
 
-<label>Nom & Prénom</label>
-<input type="text" name="nom" required>
+    <!-- INFOS CLIENT -->
+    <label>Nom & Prénom</label>
+    <input type="text" name="nom" required>
 
-<label>Email</label>
-<input type="email" name="email" required>
+    <label>Email</label>
+    <input type="email" name="email" required>
 
-<label>Téléphone</label>
-<input type="tel" name="telephone" required>
+    <label>Téléphone</label>
+    <input type="tel" name="telephone" required>
 
- <label>Catégorie</label>
-<select id="categorie" name="categorie" onchange="filtrerProduits()" required>
-    <option value="">-- Choisir une catégorie --</option>
-    <option value="Batterie">Batterie</option>
-    <option value="Écran">Écran</option>
-    <option value="Accessoire">Accessoire</option>
-</select>
-
+    <!-- PRODUIT -->
+    <label>Catégorie</label>
+    <select id="categorie" name="categorie" onchange="filtrerProduits()" required>
+        <option value="">-- Choisir une catégorie --</option>
+        <option value="Batterie">Batterie</option>
+        <option value="Écran">Écran</option>
+        <option value="Accessoire">Accessoire</option>
+    </select>
 
     <label>Produit souhaité</label>
-<select id="produit" name="produit" required>
-    <option value="">-- Choisir un produit --</option>
+    <select id="produit" name="produit" required>
+        <option value="">-- Choisir un produit --</option>
 
-    <!-- BATTERIES -->
-    <option data-cat="batterie" value="Batterie iPhone">Batterie iPhone</option>
-    <option data-cat="batterie" value="Batterie Samsung">Batterie Samsung</option>
-    <option data-cat="batterie" value="Batterie Xiaomi">Batterie Xiaomi</option>
+        <option data-cat="batterie" value="Batterie iPhone">Batterie iPhone</option>
+        <option data-cat="batterie" value="Batterie Samsung">Batterie Samsung</option>
+        <option data-cat="batterie" value="Batterie Xiaomi">Batterie Xiaomi</option>
 
-    <!-- ÉCRANS -->
-    <option data-cat="ecran" value="Écran iPhone">Écran iPhone</option>
-    <option data-cat="ecran" value="Écran Samsung">Écran Samsung</option>
-    <option data-cat="ecran" value="Écran Xiaomi">Écran Xiaomi</option>
+        <option data-cat="ecran" value="Écran iPhone">Écran iPhone</option>
+        <option data-cat="ecran" value="Écran Samsung">Écran Samsung</option>
+        <option data-cat="ecran" value="Écran Xiaomi">Écran Xiaomi</option>
 
-    <!-- ACCESSOIRES -->
-    <option data-cat="accessoire" value="Chargeur">Chargeur</option>
-    <option data-cat="accessoire" value="Câble USB">Câble USB</option>
-    <option data-cat="accessoire" value="Coque de protection">Coque de protection</option>
-    <option data-cat="accessoire" value="Verre trempé">Verre trempé</option>
-</select>
+        <option data-cat="accessoire" value="Chargeur">Chargeur</option>
+        <option data-cat="accessoire" value="Câble USB">Câble USB</option>
+        <option data-cat="accessoire" value="Coque de protection">Coque de protection</option>
+        <option data-cat="accessoire" value="Verre trempé">Verre trempé</option>
+    </select>
 
+    <label>Message</label>
+    <textarea name="message"></textarea>
 
-<label>Message</label>
-<textarea name="message"></textarea>
-
-<button type="submit">Envoyer la commande</button>
-
+    <button type="submit">Envoyer la commande</button>
 
 </form>
-    <input type="hidden" name="_subject" value="📦 Nouvelle commande LCV">
-<input type="hidden" name="_captcha" value="false">
+
 
 
 </section>
@@ -129,6 +132,7 @@ function appliquerPromo() {
     }
 }
 </script>
+
 
 
 
